@@ -31,8 +31,6 @@ RUN conda install -y python=${python_version} && \
     conda install Pillow scikit-learn notebook pandas matplotlib && \
     conda clean -yt
 
-ADD theanorc /home/keras/.theanorc
-
 ENV PYTHONPATH='/src/:$PYTHONPATH'
 
 WORKDIR /src
