@@ -30,7 +30,7 @@ ARG python_version=3.5
 
 RUN conda install -y python=${python_version} && \
     pip install --upgrade pip && \
-    conda install Pillow scikit-learn notebook pandas matplotlib && \
+    conda install Pillow scikit-learn notebook pandas matplotlib seaborn && \
     conda clean -yt
 
 ENV PYTHONPATH='/src/:$PYTHONPATH'
