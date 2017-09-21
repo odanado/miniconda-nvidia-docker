@@ -37,6 +37,10 @@ RUN conda install -y python=${python_version} && \
 
 ENV PYTHONPATH='/src/:$PYTHONPATH'
 
+RUN pip install autopep8 && \
+    jupyter nbextension install https://github.com/kenkoooo/jupyter-autopep8/archive/master.zip --user && \
+    jupyter nbextension enable jupyter-autopep8-master/jupyter-autopep8
+
 WORKDIR /src
 
 EXPOSE 8888
