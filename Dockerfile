@@ -1,5 +1,7 @@
 FROM nvidia/cuda:8.0-cudnn5-devel
 
+ENV LANG C.UTF-8
+ENV PYTHONUNBUFFERED 1
 ENV CONDA_DIR /opt/conda
 ENV PATH $CONDA_DIR/bin:$PATH
 
